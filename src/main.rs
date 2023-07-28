@@ -1,3 +1,5 @@
+mod section_2_1_printing;
+
 fn main() {
-    println!("Hello, world!");
+    section_2_1_printing::printing_example();
 }
