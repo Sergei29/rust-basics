@@ -4,8 +4,6 @@
 * - is a collection of values, and the collection of a fixed size
 * - the items within the tuple can be of different types
 *   ('a', 25, 10.12, "hello")
-* Array
-*
 * ----------------------------------------------
 */
 
