@@ -1,3 +1,7 @@
+#[path = "utils.rs"]
+mod utils;
+use utils::divider;
+
 pub fn constants_shadowing_print() {
     divider();
     octal_hex_binary_print();
@@ -10,12 +14,6 @@ pub fn constants_shadowing_print() {
     divider();
     constants();
     divider();
-}
-
-fn divider() {
-    println!(
-        "\n********************************************************************************\n"
-    );
 }
 
 fn octal_hex_binary_print() {
