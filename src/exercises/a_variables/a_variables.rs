@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 #[path = "../../utils.rs"]
 mod utils;
 use utils::divider;

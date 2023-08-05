@@ -1,4 +1,5 @@
-// use std::any::type_name;
+#![allow(unused)]
+use std::any::type_name;
 
 pub fn divider() {
     println!(
@@ -6,6 +7,6 @@ pub fn divider() {
     );
 }
 
-// pub fn type_of<T>(_value: T) -> &'static str {
-//     return type_name::<T>();
-// }
+pub fn type_of<T>(_value: T) -> &'static str {
+    return type_name::<T>();
+}
