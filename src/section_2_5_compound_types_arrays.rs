@@ -2,7 +2,7 @@
 * ----------------------------------------------
 * Array
 * - is a collection of elements of the same type
-* - createsd using square brackets []
+* - array is created using square brackets []
 * - the length, amount of elements, must be known at compile time.
 *    let my_array: [i32; 3] = [22, 200, 300]
 * - if we want to have the elements mutable:
@@ -29,6 +29,8 @@ pub fn compound_type_arrays() {
     update_each_of_elements();
     divider();
     slice_an_array();
+    divider();
+    array_methods();
     divider();
 }
 
@@ -81,13 +83,39 @@ fn update_each_of_elements() {
 fn slice_an_array() {
     let arr_1 = ['a', '+', '😜', '👋', 'H'];
     let subset_arr_1 = &arr_1[0..3]; // this array will point to the first 3 values of the arr_1. ( ref. borrowing, see later in course )
+                                     // so this sliced value is just a reference
 
     println!(
         "
     arr_1: {:?}
     subset_arr_1: {:?}
-    
     ",
         arr_1, subset_arr_1
-    )
+    );
+}
+
+fn array_methods() {
+    let arr_a = ["apples", "grapes", "oranges"];
+    let length_arr_a = arr_a.len();
+    let length_arr_a_bytes = std::mem::size_of_val(&arr_a);
+    let not_existing_element = arr_a.get(10);
+    let existing_element = arr_a.get(0);
+
+    println!(
+        "
+    .len() length of array: {length_arr_a},
+    std::mem::size_of_val(&arr_a), how much bytes occupies in memory: {length_arr_a_bytes},
+    ",
+        length_arr_a = length_arr_a,
+        length_arr_a_bytes = length_arr_a_bytes
+    );
+
+    println!(
+        "
+arr_2.get(index), returns array element or None if not existing
+not_existing_element={:?},
+existing_element={:?}
+",
+        not_existing_element, existing_element
+    );
 }

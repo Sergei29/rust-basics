@@ -14,6 +14,8 @@ pub fn constants_shadowing_print() {
     divider();
     constants();
     divider();
+    shadowing_once_more();
+    divider();
 }
 
 fn octal_hex_binary_print() {
@@ -148,4 +150,16 @@ What is the difference between the immutable variable `let` and a constant `cons
     const MY_CODE_NUM:i64 = 12345; // OK
     const SOME_RESULT:i32 = get_some_values(100:i32, 22:i32); // ERROR
     ")
+}
+
+fn shadowing_once_more() {
+    let current: &str = "my value name";
+    println!("current: {}", current);
+    // shadowing into different type
+    let current = get_img_url(current);
+    println!("current: {}", current);
+}
+
+fn get_img_url(img_name: &str) -> String {
+    return "https://my-images-".to_string() + &img_name.replace(" ", "-").to_string();
 }
