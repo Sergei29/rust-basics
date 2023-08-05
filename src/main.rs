@@ -8,9 +8,12 @@ mod b_functions;
 
 // COURSE NOTES:
 mod functions;
+mod modules;
+use modules::hello;
 
 fn main() {
     // a_variables::a_variables();
     // functions::functions_print();
-    b_functions::b_functions();
+    // b_functions::b_functions();
+    hello();
 }
