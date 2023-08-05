@@ -1,3 +1,6 @@
+#[path = "exercises/a_varaibles/a_varaibles.rs"]
+mod a_varaibles;
+
 fn main() {
-    println!("Hello world!");
+    a_varaibles::a_varaibles();
 }
