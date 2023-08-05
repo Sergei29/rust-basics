@@ -1,6 +1,6 @@
-#[path = "exercises/a_varaibles/a_varaibles.rs"]
-mod a_varaibles;
+#[path = "exercises/a_variables/a_variables.rs"]
+mod a_variables;
 
 fn main() {
-    a_varaibles::a_varaibles();
+    a_variables::a_variables()
 }
